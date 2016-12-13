@@ -1,4 +1,5 @@
 // 封装为jquery or zepto插件
+
 $.extend({
     setOpacity: function(el, opacity) {
         el.style.opacity = opacity / 100;
@@ -88,6 +89,8 @@ $.fn.fadeAway = function(options) {
             $.setOpacity($this[0], cur);
             if(cur > opacity) {
                 setTimeout(arguments.callee, delay);
+            }else if(opacity <= 0) {
+                $this[0].style.display = 'none';
             }
         })();
     }
