@@ -9,6 +9,16 @@
 <input id="fadeOutBtn" type="button" value="淡出" />
     <p id="before">前不见古人</p>
     <p id="after" style="display:none;">后不见来者</p>
-	<script src="fade.js"></script>
+    <script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.js"></script>
+    <script src="fade.jquery.js"></script>
+	<!-- <script src="fade.js"></script> -->
+	<script>
+		$('#fadeInBtn').click(function() {
+			$('#after').fadeBack();
+		});
+		$('#fadeOutBtn').click(function() {
+			$('#after').fadeAway();
+		});
+	</script>
 </body>
 </html>
