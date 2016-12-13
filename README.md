@@ -1,4 +1,4 @@
-## fade in and fade out effects rewrited in a jquery plugin
+fade in and fade out effects rewrited in a jquery plugin
 
 ## Getting Started
 ```
@@ -22,7 +22,7 @@ heres some options , each of which has a defaults value
 
 | Name                            | Default                                         | Description                                                                                                                                                                                                                                             |
 |---------------------------------|-------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| toOpacity                       | 100 with fadeBack and 100 with fadeAway         | the value of dom opacity  
+| toOpacity                       | 100 with fadeBack and 0 with fadeAway           | the value of dom opacity  
 | duration                        | 200                                             | how long the effect lasts
 | delay                           | 20                                              | frequency 
 | callback                        | null                                            | callback function when effects end
