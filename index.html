@@ -17,7 +17,11 @@
 			$('#after').fadeBack();
 		});
 		$('#fadeOutBtn').click(function() {
-			$('#after').fadeAway();
+			$('#after').fadeAway({
+				callback: function() {
+					alert('Hi!')
+				}
+			});
 		});
 	</script>
 </body>

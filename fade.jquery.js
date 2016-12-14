@@ -43,6 +43,10 @@ $.fn.fadeBack = function(options) {//duration, delay, opacity
             $.setOpacity($this[0], cur);
             if(cur < opacity) {
                 setTimeout(arguments.callee, delay);
+            }else {
+                if(self.config.callback && typeof self.config.callback == 'function'){
+                    self.config.callback();
+                }
             }
 		})();
 	}
@@ -91,6 +95,9 @@ $.fn.fadeAway = function(options) {
                 setTimeout(arguments.callee, delay);
             }else if(opacity <= 0) {
                 $this[0].style.display = 'none';
+                if(self.config.callback && typeof self.config.callback == 'function'){
+                    self.config.callback();
+                }
             }
         })();
     }
